@@ -18,7 +18,7 @@
  <p><input name="query_name" type="text"><input type="submit" class="btn btn-success btn-large" value="查询" onclick="window.location.href='/query_answer/'"></p>
 {% for book_list in book_set %}
     <div class='row-fluid'>
-    <h3>作者名：{{book_list.0.name}}</h3> <h4>作者编号：{{book_list.0.Author_ID}}</h4>
+    <h3>作者名字：{{book_list.0.name}}</h3> <h4>作者编号：{{book_list.0.Author_ID}}</h4>
     </div>
     <div class='row-fluid'>
     {% for book in book_list.1 %}
