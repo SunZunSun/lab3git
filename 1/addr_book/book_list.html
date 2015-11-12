@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<body bgproperties="fixed" background="/site_media/2.jpg" width="1540",height="800">
+<h2 align="center">查询列表</h2>
+<form><method="get">
+<table align="center" border="1">
+ <tr>
+  <th>书名</th>操作</th>
+ </tr>
+{% for book in book_list %}
+ <tr>
+  <td><a href="/see/?book_name={{book.name}}" target="_blank">{{ book.name }}</a></td>
+  <td> <input name="delete" type="button" value="删除" onclick="window.location.href='/delete/?name={{book.name}}'" > </td>
+  <td> <input name="reload" type="button" value="更新" onclick="window.location.href='/update/?name={{book.name}}'" > </td>  
+ </tr>
+{% endfor %}
+</table>
+</form>
+</body>
+</html>

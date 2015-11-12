@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+<link href="/css/hosting.css" rel="stylesheet" media="all">
+<script type="text/javascript" src="/css/year_month_day.js"></script> 
+</head>
+<body>
+<div class="container">
+{% if error_5 %}<script language="javascript">window.location.href="/author_add/";</script>
+{% endif %}
+<div class="row-fluid">
+<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp输入新内容</h2>
+</div>
+<form method="post">
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+  <span><h4>书名</span><input name="name" type="text" value={{it.name}}></h4>
+    {% if error_1 %}<p align="center" style="color:red">信息不规范或不完整</p>
+    {% else %}
+    {% endif %}
+  </div>
+  </div>
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+  <span><h4>作者</span><input name="owner" type="text" value={{it.owner.name}}></h4>
+    {% if error_2 %}<p align="center" style="color:red">信息不规范或不完整</p>
+    {% else %}
+    {% endif %}
+  </div>
+  </div>
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+  <span><h4>价格</span><input name="price" type="text" value={{it.price}}></h4>
+    {% if error_3 %}<p align="center" style="color:red">信息不规范或不完整</p>
+    {% else %}
+    {% endif %}
+  </div>
+  </div>
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+  <span><h4>书籍编号</span><input name="ISBN" type="text" value={{it.ISBN}}></h4>
+    {% if error_4 %}<p align="center" style="color:red">信息不规范或不完整</p>
+    {% else %}
+    {% endif %}
+  </div>
+  </div>
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+  <span><h4>出版社</span><input name="pub_house" type="text" value={{it.pub_house}}></h4>
+  </div>
+  </div>
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+  <span><h4>出版日期</span>
+    <select name="selYear" id="selYear"></select> 
+    <select name="selMonth" id="selMonth"></select> 
+    <select name="selDay" id="selDay"></select> 
+    <script type="text/javascript"> 
+    var selYear = window.document.getElementById("selYear"); 
+    var selMonth = window.document.getElementById("selMonth"); 
+    var selDay = window.document.getElementById("selDay"); 
+    new DateSelector(selYear, selMonth, selDay, 2004, 2, 29);
+    </script>
+    {% if error_4 %}<p align="center" style="color:red">信息不规范或不完整</p>
+    {% else %}
+    {% endif %}
+  </h4>
+  </div>
+  </div>
+  <div class="span6 row-fluid">
+  <div class = "span4 Planlist">
+    <span><h4>操作</span><input type="submit" value="保存" class="btn btn-success btn-large">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="重填" class="btn btn-success btn-large"></h4>
+  </div>
+  </div>
+</form>
+</div>
+</body>
+</html>

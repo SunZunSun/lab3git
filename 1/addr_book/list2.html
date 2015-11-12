@@ -1,0 +1,26 @@
+﻿<html>
+<body bgproperties="fixed" background="/site_media/2.jpg" width="1540",height="800">
+<h2 align="center">您的通讯录</h2>
+<form><method="get">
+<table align="center" border="1">
+ <tr>
+  <th>姓名</th><th>学号</th><th>性别</th><th>生日</th><th>电话</th><th>Email</th><th>地址</th><th>QQ</th><th colspan="2">操作</th>
+ </tr>
+{% for people in people_list %}
+ <tr>
+  <td>{{ people.name }}</td>
+  <td>{{ people.school_number }}</td>
+  <td>{% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+  <td>{{ people.year}}年{{ people.month }}月{{people.day}}日</td>
+  <td>{{ people.phone }}</td>
+  <td>{{ people.email }}</td>
+  <td>{{ people.address }}</td>
+  <td>{{ people.QQ }}</td>
+  <td> <input name="delete" type="button" value="删除" onclick="window.location.href='/delete/?id={{people.school_number}}'" > </td>
+  <td> <input name="reload" type="button" value="更新" onclick="window.location.href='/update/?id={{people.school_number}}'" > </td>  
+ </tr>
+{% endfor %}
+</table>
+</form>
+</body>
+</html>

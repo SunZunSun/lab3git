@@ -1,0 +1,28 @@
+﻿<html>
+<style type="text/css">
+body {position:fixed;left:80px;top:200px width:250% height:250%}
+</style>
+<h1>登录</h1>
+<body bgproperties="fixed" background="/site_media/2.jpg" width="1540",height="800">
+<form method="post" >
+<table border=0 align="center">
+<tr>
+ <td>用户名</td>
+ <td><input name="name" type="text"></td>
+</tr>
+<tr>
+ <td>密码</td>
+ <td><input name="code" type="password"></td>
+{% if judge %}<td>请输入信息</td>
+{% else %}<td style="color:red">输入信息错误</td>
+{% endif %}
+</tr>
+<tr>
+ <td><input type="submit" value="登录" style="background:#BBFFBB;border-radius:5px;-moz-border-radius:5px;width:52px;height:27px;font-size:19px"></td>
+</tr>
+<tr>
+ <td>还未注册？<input type="submit" value="注册" onclick="window.open('/register/')"></td>
+</table>
+</form>
+</body>
+</html>

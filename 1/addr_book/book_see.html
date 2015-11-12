@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+<link href="/css/hosting.css" rel="stylesheet" media="all">
+</head>
+<body>
+<div class="row-fluid PageHead">
+<h2 align="center">详细信息</h2>
+</div>
+<table align="center">
+<tr><td>
+<div class = "span4 Planlist" align="center">
+<h4>书籍信息</h4>
+<p>书名： {{m_book.name}}</p>
+<p>书籍编号： {{m_book.owner.name}}</p>
+<p>作者名： {{m_book.owner.name}}</p>
+<p>价格： ${{m_book.price}}</p>
+<p>出版社： {{m_book.pub_house}}</p>
+{% if m_book.owner.sex %}
+<p>性别：男</p>
+{% else %}
+<p>性别：女</p>
+{% endif %}
+</div>
+</td></tr>
+<tr><td>
+<div class = "span4 Planlist" align="center">
+<h4>作者信息</h4>
+<p>作者： {{m_book.owner.name}}</p>
+<p>作者编号： {{m_book.owner.Author_ID}}</p>
+<p>作者年龄： {{m_book.owner.Age}}</p>
+<p>作者国籍：{{m_book.owner.Country}}</p>
+{% if m_book.owner.sex %}
+<p>性别：男</p>
+{% else %}
+<p>性别：女</p>
+{% endif %}
+</div>
+</td></tr>
+</table>
+</body>
+</html>

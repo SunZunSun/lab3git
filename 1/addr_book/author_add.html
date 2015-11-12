@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+<link href="/css/hosting.css" rel="stylesheet" media="all">
+<script type="text/javascript" src="/css/year_month_day.js"></script> 
+</head>
+<body>
+<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp请添加作者</h2>
+<form method="post">
+{% if judge %}
+{% else %}<p style="color:red">输入信息不规范或不完整</p>
+{% endif %}
+  <div class="span6 row-fluid"><div class = "span4 Planlist">
+  <span><h4>姓名<input name="name" type="text"></h4>
+  </div></div>
+  <div class="span6 row-fluid"><div class = "span4 Planlist">
+  <span><h4>编号<input name="ID" type="text"></h4>
+  </div></div>
+  <div class="span6 row-fluid"><div class = "span4 Planlist">
+  <span><h4>性别&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name="sex" type="radio" value="M"> 男 <input name="sex" type="radio" value="F"> 女 </h4>
+  </div></div>
+  <div class="span6 row-fluid"><div class = "span4 Planlist">
+  <span><h4>年龄<input name="year" type="text"></h4>
+  </div></div>
+  <div class="span6 row-fluid"><div class = "span4 Planlist">
+  <span><h4>国籍<input name="Country" type="text"></h4>
+  </div></div>
+  <div class="span6 row-fluid"><div class = "span4 Planlist">
+  <span><h4>操作<input type="submit" value="保存" class = "btn btn-success btn-large"> <input type="reset" value="重填" class = "btn btn-success btn-large"></h4>
+  </div></div>
+</form>
+</body>
+</html>
